@@ -1,0 +1,113 @@
+.nav {
+  position: fixed;
+
+  width: 100%;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+
+  &__toggler div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+  }
+
+  li:after {
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+  }
+
+  li:hover:after {
+    width: 100%;
+  }
+}
+
+.home {
+  height: 70vh;
+
+  &__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__orderButton {
+    margin-top: 150px;
+    padding: 25px;
+  }
+}
+
+.dishes {
+  display: flex;
+
+  &__description {
+    width: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__description > p {
+    margin: 5%;
+  }
+}
+
+.dish__image {
+  width: clamp(50vw, 50vw, 50vw);
+  height: clamp(25vh, 45vh, 50vh);
+  // border: 5px solid #ddd;
+}
+
+.dish__details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.OpeningTimes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.OpeningTimes p {
+  margin: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__details {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__details p {
+    margin: 10px;
+  }
+
+  &__form {
+    display: block;
+  }
+
+  &__form label,
+  input,
+  button {
+    display: block;
+    margin: 10px;
+  }
+}
