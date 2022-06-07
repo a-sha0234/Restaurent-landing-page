@@ -1,9 +1,13 @@
+//navbar.js
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 8vh;
-  background-color: rgb(0, 28, 73);
+  background-color: rgb(22, 24, 26);
+  position: fixed;
+
+  width: 100%;
 
   &__brand {
     text-transform: uppercase;
@@ -29,6 +33,26 @@
     cursor: pointer;
     display: none;
   }
+
+  li:after {
+    // hover effect
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+  li:hover:after {
+    //hover effect
+    width: 100%;
+    background: pink;
+  }
+
+  &__link {
+    font-size: 1.2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -43,10 +67,17 @@
       right: 0;
       width: 50%;
       height: 93vh;
-      background-color: rgb(0, 28, 73);
+      background-color: rgb(22, 24, 26);
       flex-direction: column;
       transform: translateX(100%);
       transition: 0.3s ease-in;
+      z-index: 1;
+    }
+  }
+
+  .dishes {
+    &__description {
+      min-width: 100%;
     }
   }
 }
@@ -67,4 +98,132 @@
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-9px, -5px);
+}
+
+//home.js
+.home {
+  height: 70vh;
+
+  &__container {
+    background-image: url(../images/pizza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__introduction p {
+    font-size: 1.8rem;
+
+    color: white;
+  }
+
+  &__orderButton {
+    // position: relative;
+    margin-top: 150px;
+    padding: 25px;
+    font-size: 1.2rem;
+  }
+  &__orderButton:hover {
+    background-color: yellowgreen;
+  }
+}
+
+// SignatureDishes.js
+
+.dishes {
+  display: flex;
+
+  &__description {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.322);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // background-color: rgba(255, 255, 255, 0.801);
+  }
+
+  &__description > p {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    margin: 5%;
+  }
+}
+
+.dish__image {
+  width: clamp(50vw, 50vw, 50vw);
+  height: clamp(25vh, 45vh, 50vh);
+  // border: 5px solid #ddd;
+}
+
+.dish__details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(10, 10, 10, 0.781);
+  // background-color: rgba(24, 165, 11, 0.644);
+}
+
+//OpeningHours.js
+
+.OpeningTimes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.OpeningTimes p {
+  margin: 10px;
+}
+
+//contactForm.js
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #282828ce;
+
+  color: white;
+
+  &__details {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__details p {
+    margin: 10px;
+  }
+
+  &__form {
+    display: block;
+  }
+
+  &__form label,
+  input,
+  button {
+    display: block;
+    margin: 10px;
+    font-size: 1.2rem;
+  }
+
+  &__form button:hover {
+    background-color: yellowgreen;
+  }
+}
+
+button {
+  padding: 10px;
+  background-color: yellow;
 }
