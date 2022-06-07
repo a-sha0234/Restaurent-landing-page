@@ -17,24 +17,32 @@ export default function Navbar() {
 
   return (
     <nav className="nav">
-      <a href="#" className="nav__brand">
-        pizza
+      <a href="#home" className="nav__brand">
+        pizza4us
       </a>
       <ul className={navActive}>
         <li className="nav__item">
-          <a href="#">Home</a>
+          <a href="#home" className="nav__link">
+            Home
+          </a>
         </li>
         <li className="nav__item">
           {" "}
-          <a href="#">menu</a>
+          <a href="#dishes" className="nav__link">
+            Signature Dishes
+          </a>
         </li>
         <li className="nav__item">
           {" "}
-          <a href="#">opening hours</a>
+          <a href="#openTimes" className="nav__link">
+            Opening hours
+          </a>
         </li>
         <li className="nav__item">
           {" "}
-          <a href="#">contact us</a>
+          <a href="#contact" className="nav__link">
+            Contact us
+          </a>
         </li>
       </ul>
 
