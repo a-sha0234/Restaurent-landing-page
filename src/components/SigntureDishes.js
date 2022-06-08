@@ -1,5 +1,4 @@
 export default function SignatureDishes(props) {
-  console.log(props);
   return (
     <section className="dishContainer">
       <div className="dishes" id="dishes">
