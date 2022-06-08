@@ -1,3 +1,4 @@
+//css reset
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,10 +17,9 @@ button {
   border: none;
 }
 
-body {
-  // background-color: rgba(0, 0, 0, 0.589);
-}
-
 html {
   scroll-behavior: smooth;
 }
+
+//variables
+$fontSize: 1.2rem;
